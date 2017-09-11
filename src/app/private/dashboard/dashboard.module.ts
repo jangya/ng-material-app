@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {MdCardModule} from '@angular/material';
 import { DashboardRoutingModule, routedComponents } from './dashboard.routes';
 import { SharedModule } from '../shared/shared.module';
 import { FlotModule } from './charts/flotChart';
@@ -9,10 +10,11 @@ import { JVectorMapModule } from './map/jvectorMap';
 @NgModule({
   imports: [
     CommonModule,
+    MdCardModule,
     SharedModule, 
-    // FlotModule, 
-    // JVectorMapModule,
-    // IboxtoolsModule, 
+    FlotModule, 
+    JVectorMapModule,
+    IboxtoolsModule, 
     DashboardRoutingModule
   ],
   declarations: [routedComponents]

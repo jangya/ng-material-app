@@ -6,16 +6,16 @@ declare var jQuery:any;
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: 'dashboard.component.html'
+  templateUrl: 'dashboard.component.html',
+  styleUrls: ['dashboard.component.scss']
 })
 
 export class DashboardComponent implements OnDestroy, OnInit {
 
-  public nav:any;
   public todos: any;
 
   public constructor(private router: Router, private expenseService: ExpenseService) {
-    this.nav = document.querySelector('nav.navbar');
+    // this.nav = document.querySelector('nav.navbar');
     this.todos = [
       {name: "Buy a milk", completed: true},
       {name: "Go to shop and find some products.", completed: false},
@@ -37,7 +37,7 @@ export class DashboardComponent implements OnDestroy, OnInit {
 
 
   public ngOnDestroy():any {
-    this.nav.classList.remove("white-bg");
+    // this.nav.classList.remove("white-bg");
   }
 
   // Flot chart data and options

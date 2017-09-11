@@ -26,12 +26,12 @@
     left: 0;
     right: 0;
     display: flex;
-    flex: 1 1 auto;
     flex-direction: column;
   }
-//   app-component-sidenav {
-//     display: flex;
-//   }
+  .app-container {
+    display: flex;
+    flex: 1 1 auto;
+  }
   .docs-component-viewer-sidenav-container {
     width: 100%;
   

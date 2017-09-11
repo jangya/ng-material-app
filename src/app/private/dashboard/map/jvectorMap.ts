@@ -8,7 +8,7 @@ declare var jQuery:any;
 
 
 @Directive({
-  selector: 'div[jvectormap]',
+  selector: 'div[jvectormap]'
 })
 export class JVectorMapDirective implements OnDestroy, OnChanges, OnInit {
 

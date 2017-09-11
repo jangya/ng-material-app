@@ -1,6 +1,7 @@
 import { Component, NgZone, OnInit, ViewEncapsulation, ViewChild} from '@angular/core';
 import {MdSidenav, MdSidenavModule} from '@angular/material';
 import {Router, RouterModule} from '@angular/router';
+import { Expense, ExpenseService } from '../../services';
 
 const SMALL_WIDTH_BREAKPOINT = 840;
 
@@ -13,9 +14,10 @@ const SMALL_WIDTH_BREAKPOINT = 840;
 export class LayoutComponent implements OnInit {
   showShadow = true;
   private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`);
-  
+  expenses: Expense[];
   constructor(private _router: Router,
-              zone: NgZone) {
+    private expenseService: ExpenseService,
+    zone: NgZone) {
     // TODO(josephperrott): Move to CDK breakpoint management once available.
     this.mediaMatcher.addListener(mql => zone.run(() => this.mediaMatcher = mql));
   }
@@ -27,6 +29,9 @@ export class LayoutComponent implements OnInit {
       if (this.isScreenSmall()) {
         this.sidenav.close();
       }
+    });
+    this.expenseService.getExpenses().subscribe(resultFromExpense => {
+      this.expenses = resultFromExpense;
     });
   }
 
