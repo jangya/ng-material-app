@@ -1,6 +1,7 @@
 import {BrowserModule}      from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule}           from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {LocationStrategy, PathLocationStrategy} from '@angular/common';
 // import { FormsModule }        from '@angular/forms';
 import { HttpModule }         from '@angular/http';
@@ -23,6 +24,7 @@ import { AppRoutingModule}          from "./app.routes";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     HttpModule,
     HomeModule,
     ServicesModule,

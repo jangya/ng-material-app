@@ -1,12 +1,12 @@
 
 
 <div class="loginscreen">
-    <form class="m-t" role="form" method="post" (ngSubmit)="loginUser()">
+    <form class="m-t" role="form" method="post" (ngSubmit)="loginUser()" fxLayout="row" fxLayoutAlign="center center">
         <md-card class="example-card">
             <md-card-header>
                 <md-card-title>Month OutLay</md-card-title>
             </md-card-header>
-            <md-card-content>
+            <md-card-content fxLayout="column">
                 <md-form-field class="example-full-width">
                     <input mdInput placeholder="Email" name="email"  [(ngModel)]="model.email">
                     <!-- <md-error *ngIf="emailFormControl.hasError('pattern')">
