@@ -5,8 +5,8 @@
                 [opened]="!isScreenSmall()"
                 [mode]="isScreenSmall() ? 'over' : 'side'">
       <nav>
-        <div class="user-info">
-            <i class="material-icons">face</i>
+        <div class="user-info" fxLayout="row">
+          <i class="material-icons md-48 md-dark">account_circle</i>
             <a [routerLink]="['/user/logout']" md-button >Logout</a>
         </div>
         

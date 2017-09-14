@@ -3,6 +3,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule}           from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {LocationStrategy, PathLocationStrategy} from '@angular/common';
+import {MdNativeDateModule} from '@angular/material';
 // import { FormsModule }        from '@angular/forms';
 import { HttpModule }         from '@angular/http';
 // import { NgbModule }          from '@ng-bootstrap/ng-bootstrap';
@@ -25,6 +26,7 @@ import { AppRoutingModule}          from "./app.routes";
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    MdNativeDateModule,
     HttpModule,
     HomeModule,
     ServicesModule,

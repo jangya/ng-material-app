@@ -4,16 +4,15 @@
       <img class="docs-angular-logo"
         src="../../../assets/img/homepage/angular-white-transparent.svg"
         alt="angular">
-      <span>dashboard</span>
+      <span>Month</span><span>Outlay</span>
     </a>
     <a md-button class="docs-button" routerLink="components">Components</a>
     <a md-button class="docs-button" routerLink="guides">Guides</a>
     <div class="flex-spacer"></div>
-    <a md-button class="docs-button" href="https://github.com/angular/material2" aria-label="GitHub Repository">
-      <img class="docs-github-logo"
-        src="../../../assets/img/homepage/github-circle-white-transparent.svg"
-        alt="GitHub">
-      GitHub
-    </a>
+    
+    
+    <input mdInput type="hidden" [mdDatepicker]="picker" placeholder="Choose a date">
+    <md-datepicker startView="year" touchUi="true" #picker></md-datepicker>
+    <button md-button (click)="picker.open()"><i class="material-icons">date_range</i> Month</button>
   </nav>
   
