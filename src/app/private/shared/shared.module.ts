@@ -7,6 +7,7 @@ import {IboxtoolsModule} from './iboxtools/iboxtools.module';
 import {FooterComponent} from "./footer/footer.component";
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutComponent } from './layout/layout.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   imports: [
@@ -20,11 +21,13 @@ import { LayoutComponent } from './layout/layout.component';
   declarations: [
     FooterComponent,
     NavbarComponent,
-    LayoutComponent
+    LayoutComponent,
+    BreadcrumbsComponent
   ],
   exports: [
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    BreadcrumbsComponent
   ],
 })
 

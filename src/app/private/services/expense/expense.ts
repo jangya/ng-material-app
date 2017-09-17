@@ -5,4 +5,5 @@ export class Expense {
     details: string; 
     sharing: boolean;
     userId: string;
+    members: [Object]; 
   }

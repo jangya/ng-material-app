@@ -10,3 +10,15 @@
   <div class="modal-footer">
     <button type="button" class="btn btn-default" (click)="close()">Close</button>
   </div> -->
+  <h1 md-dialog-title>{{data.expense.name}}</h1>
+  <div md-dialog-content>
+    <p>Add members to this expense</p>
+    <md-form-field class="full-width" *ngFor="let member of data.expense.members">
+        <input mdInput tabindex="1" placeholder="Person's mail Id or mobile no" [(ngModel)]="member.name">
+        <div mdSuffix (click)="moreMembers()"><i class="fa fa-plus"></i></div>
+    </md-form-field>
+  </div>
+  <div md-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+    <button md-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+    <button md-button [md-dialog-close]="data.expense" tabindex="2">Add</button>
+  </div>
